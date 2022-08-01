@@ -1,5 +1,5 @@
-import {LikesSection} from '../components/likesSection'
-import {CommentsList} from '../components/commentsList'
+import {LikesSection} from './likesSection'
+import {CommentsList} from './commentsList'
 
 export function ImageCard () {
     return (

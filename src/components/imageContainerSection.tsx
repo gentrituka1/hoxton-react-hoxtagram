@@ -1,4 +1,4 @@
-import {ImageCard} from '../components/imageCardArticle'
+import {ImageCard} from './imageCardArticle'
 
 export function ImageContainerSection() {
   return (

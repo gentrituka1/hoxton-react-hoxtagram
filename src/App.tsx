@@ -1,6 +1,10 @@
 import './styles.css'
-import Logo from '../components/logo'
-import {ImageContainerSection} from '../components/imageContainerSection'
+import Logo from './components/logo'
+import {ImageContainerSection} from './components/imageContainerSection'
+
+type Props = {
+  
+}
 
 function App() {
 
