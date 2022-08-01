@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
 import { AddPictures } from "./addPictures";
-// Instructions
-// - Start a new React project ✅
-// - Copy the assets and the DB folder into your new project ✅
-// - Use the HTML inside index.html as a reference to build your React App and components. ✅
-// - Separate the CSS into smaller files
-// - Just like before in the original, start your database server with npx json-server --watch db/db.json --routes db/routes.json ✅
-// - Use fetch along with what we learned about useEffect to get the data from your API ✅
-// - Use the data to render your components on the page ✅
 import "./App.css";
 import { Article } from "./components/imageContainerSection";
 export type ImageType = {
