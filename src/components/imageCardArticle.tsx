@@ -1,17 +1,22 @@
-import {LikesSection} from './likesSection'
-import {CommentsList} from './commentsList'
+import { CommentType } from "../App";
 
-export function ImageCard () {
-    return (
-        <>
-        <article>
-        <h2 className="title">Title of image goes here</h2>
-              <img src="../assets/image-placeholder.jpg" className="image" />
-              
-              <LikesSection />
-
-              <CommentsList />
-        </article>
-        </>
-    )
+type Props = {
+  comment: CommentType;
+    deleteComment: (commentId: number) => void;
+};
+export function ArticleComments({ comment, deleteComment }: Props) {
+  return (
+    <ul className="comments">
+      <li className="comment">
+        {comment.content}
+        <button
+          onClick={() => {
+            deleteComment(comment.id);
+          }}
+        >
+          🗑️
+        </button>
+      </li>
+    </ul>
+  );
 }
