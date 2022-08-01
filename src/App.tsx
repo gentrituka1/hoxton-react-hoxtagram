@@ -9,7 +9,7 @@ import { AddPictures } from "./addPictures";
 // - Use fetch along with what we learned about useEffect to get the data from your API ✅
 // - Use the data to render your components on the page ✅
 import "./App.css";
-import { Article } from "./components/imageCardArticle";
+import { Article } from "./components/imageContainerSection";
 export type ImageType = {
   id: number;
   title: string;
