@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddPictures } from "./addPictures";
 import "./App.css";
-import { Article } from "./components/imageContainerSection";
+import { DogName } from "./components/DogName";
 export type ImageType = {
   id: number;
   title: string;
@@ -20,10 +20,10 @@ function App() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/images")
+    fetch("http://localhost:4000/images")
       .then((resp) => resp.json())
       .then((imagesFromServer) => setImages(imagesFromServer));
-    fetch("http://localhost:3000/comments")
+    fetch("http://localhost:4000/comments")
       .then((resp) => resp.json())
       .then((commentsFromServer) => setComments(commentsFromServer));
   }, []);
@@ -37,7 +37,7 @@ function App() {
   }
   function deleteArticle(id: number) {
     const imagesCopy = images.filter((image) => image.id !== id);
-    fetch(`http://localhost:3000/images${id}`, {
+    fetch(`http://localhost:4000/images${id}`, {
       method: "DELETE",
     });
     setImages(imagesCopy);
@@ -50,7 +50,7 @@ function App() {
       image,
     };
 
-    fetch("http://localhost:3000/images", {
+    fetch("http://localhost:4000/images", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function App() {
    
     };
 
-    fetch("http://localhost:3000/comments", {
+    fetch("http://localhost:4000/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -88,7 +88,7 @@ function App() {
 
       <section className="image-container">
         {images.map((image) => (
-          <Article
+          <DogName
             createComment={createComment}
             image={image}
             comments={comments}

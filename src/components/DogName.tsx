@@ -2,7 +2,7 @@ import { AddCommentForm } from "../addComments";
 import { ImageType } from "../App";
 import { CommentType } from "../App";
 
-import { ArticleComments } from "./imageCardArticle";
+import { ArticleComments } from "./ArticleComments";
 
 type Props = {
   image: ImageType;
@@ -11,7 +11,7 @@ type Props = {
   deleteArticle: (imageId: number) => void;
   createComment: (content: string, imageId: number) => void;
 };
-export function Article({
+export function DogName({
   image,
   comments,
   deleteComment,
